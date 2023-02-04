@@ -1,7 +1,7 @@
 const letter = []; //This will act as stack
-const letter1 = []; //This will act as stack
+const newLetter = []; //This will act as stack
 
-const input = require('prompt-sync')({ sigint: true }); // inorder to make prompt work
+const input = require('prompt-sync')({ sigint: true }); // inorder to make prompt work on terminal
 
 let word = input("what is your name? ");
 
@@ -21,16 +21,16 @@ else {
 //Option 2
 
 console.log("second Option")
-let revWord1;
+let reverseWord;
 for (let i = 0; i < word.length; i++) {
-    letter1.push(word[i]);
+    newLetter.push(word[i]);
 }
 
 for (let i = 0; i < word.length; i++) {
-    revWord1 += letter1.pop();
+    reverseWord += newLetter.pop();
 }
 
-if (word.toUpperCase() === revWord1.toUpperCase()) {
+if (word.toUpperCase() === reverseWord.toUpperCase()) {
     console.log(word, " is palindrome");
 }
 else {
